@@ -1,0 +1,10 @@
+body {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 25px;
+  }
+  
+  h1 {
+    background-color: cadetblue;
+    padding: 0.5em;
+  }
