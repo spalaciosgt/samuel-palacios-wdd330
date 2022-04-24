@@ -5,6 +5,7 @@ body {
   }
   
   h1 {
-    background-color: cadetblue;
+    background-color: skyblue;
     padding: 0.5em;
+    text-align: center;
   }
