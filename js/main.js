@@ -1,11 +1,27 @@
 const block01 = [
     {
-        label: "Week01",
-        url: "week01/"
+        label: "Week 01",
+        url: "week01/index.html"
     },
     {
-        label: "Week02",
-        url: "week02/"
+        label: "Week 02",
+        url: "week02/index.html"
+    },
+    {
+        label: "Week 03",
+        url: "week03/index.html"
+    },
+    {
+        label: "Week 04",
+        url: "week04/index.html"
+    },
+    {
+        label: "Week 05",
+        url: "week05/index.html"
+    },
+    {
+        label: "To Do",
+        url: "week06/index.html"
     }
 ]
 
@@ -23,6 +39,6 @@ function print_block(block) {
         li.appendChild(a); 
         ol_bl01.appendChild(li);                
     }
-}    
+}
 
 print_block(block01)
