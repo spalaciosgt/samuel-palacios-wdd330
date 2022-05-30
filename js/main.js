@@ -21,7 +21,7 @@ const block01 = [
     },
     {
         label: "To Do",
-        url: "week06/index.html"
+        url: "week06/todo.html"
     }
 ]
 

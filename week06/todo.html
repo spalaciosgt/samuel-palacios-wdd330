@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="description" content="To Do List App">
+    <meta name="author" content="Samuel Palacios">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" href="css/style.css">
+    <title>To Do List App - Samuel Palacios</title>
+  </head>
+
+  <body>
+    
+    <h1>To Do List</h1>
+
+    <div class="main-div">  
+      
+      <div>
+        <input type="text" name="newItem" id="newItem" placeholder="Add a new task..." />
+        <button id="addNewItem" class="addActiveButton">+</button>
+      </div>
+
+      <ul id="listItems">
+        <li>
+          <div>
+            <input type="checkbox"/> 
+            <span>Send last homework from WDD330</span>
+            <button>X</button>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input type="checkbox"/> 
+            <span class="itemDone">Check Transfers</span>
+            <button>X</button>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="actions-div">
+      <button id="queryAll" class="activeButton">All</button>
+      <button id="queryActive">Active</button>
+      <button id="queryCompleted">Done</button>
+      <button id="clearAll">Clear</button>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
