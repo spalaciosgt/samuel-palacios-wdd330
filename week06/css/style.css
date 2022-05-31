@@ -1,3 +1,6 @@
+/*
+    Constants
+*/
 :root {    
     --body-background-color: #c0b8e9;
     --head-font-color: #7609e2;
@@ -19,6 +22,9 @@
     --color-active-item: #001f1c;
 }
 
+/*
+    Box Model
+*/
 * { 
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
@@ -26,6 +32,9 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/*
+    General and Small Views
+*/
 body {
     background: var(--body-background-color);
 }
@@ -46,7 +55,15 @@ h1 {
     width: var(--main-input-size-small);
     padding: 10px;
     outline: 0;
-    border: none;
+    border: none;    
+}
+
+#newItem:invalid {
+    border: 2px solid red;
+}
+
+#newItem:valid {
+    border: 2px solid green;
 }
 
 button {
@@ -111,9 +128,10 @@ ul li div button {
 
 ul li span {    
     width: 92%;
-    margin: 8px 5px;
+    margin: 6px 5px;
     display: block;
     color: var(--color-active-item);
+    font-size: 1.25em;
 }
 
 ul li div input {   
@@ -126,7 +144,14 @@ ul li div .itemDone {
     color: gray;
     text-decoration: line-through;
 }
-  
+
+#clearAll {
+    color: red;
+}
+
+/*
+    Media Queries for Medium and Large Screens
+*/
 @media only screen and (min-width: 45rem) {
     .main-div {
         width: var(--main-div-size-large);

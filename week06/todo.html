@@ -1,6 +1,9 @@
+<!-- DOCTYPE -->
+
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head -->
   <head>
     <meta name="description" content="To Do List App">
     <meta name="author" content="Samuel Palacios">  
@@ -10,43 +13,35 @@
     <title>To Do List App - Samuel Palacios</title>
   </head>
 
-  <body>
+<!-- Body -->  
+  <body> 
     
+    <!-- Header 1 -->
     <h1>To Do List</h1>
 
-    <div class="main-div">  
-      
+    <!-- Main Div -->
+    <div class="main-div">        
+
+      <!-- New Task Input -->
       <div>
-        <input type="text" name="newItem" id="newItem" placeholder="Add a new task..." />
+        <input type="text" name="newItem" id="newItem" placeholder="Add a new task..." minlength="2" required/>
         <button id="addNewItem" class="addActiveButton">+</button>
       </div>
 
-      <ul id="listItems">
-        <li>
-          <div>
-            <input type="checkbox"/> 
-            <span>Send last homework from WDD330</span>
-            <button>X</button>
-          </div>
-        </li>
-        <li>
-          <div>
-            <input type="checkbox"/> 
-            <span class="itemDone">Check Transfers</span>
-            <button>X</button>
-          </div>
-        </li>
+      <!-- Unordered List of Tasks -->
+      <ul id="listItems">        
       </ul>
-
     </div>
 
+    <!-- Actions Tool Bar Div -->
     <div class="actions-div">
       <button id="queryAll" class="activeButton">All</button>
       <button id="queryActive">Active</button>
       <button id="queryCompleted">Done</button>
-      <button id="clearAll">Clear</button>
+      <button id="clearAll">Clear All</button>
     </div>
 
-    <script src="todo.js"></script>
+    <!-- Module "To Do" Access Reference -->  
+    <script src="js/todos.js" type="module"></script>
   </body>
 </html>
