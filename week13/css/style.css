@@ -1,0 +1,212 @@
+/*
+    General Constants
+*/
+:root {    
+    --body-background-color: #cbf0cd;
+    --head-font-color: #0031d1;
+    --head-font-size-small: 2em;
+    --head-font-size-large: 4em; 
+    --main-div-size-small: 80%;
+    --main-div-size-large: 60%;
+}
+
+/*
+    General Box Model
+*/
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+    General and Small Views
+*/
+body {
+    background: var(--body-background-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--head-font-color);
+    font-size: var(--head-font-size-small);
+}
+  
+.main-div {
+    width: var(--main-div-size-small);
+    display: table;
+    margin: 0 auto;
+}
+
+/*
+    Shopping Record App
+*/
+#start {
+    display: grid;
+}
+
+#item {
+    display: grid;
+    grid-template-columns: 50% 40%;
+    grid-column-gap: 5%;
+    column-gap: 5%;
+}
+
+.subItem {
+    display: grid;
+    grid-auto-rows: min-content;
+}
+
+.subItem h2 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.labelClass {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.inputClass {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+input {
+    border-radius: 10px;
+}
+
+select {
+    border-radius: 10px;
+}
+
+input:required {
+    border-left: 5px solid red;
+}
+
+input:required:valid {
+    border-left: 5px solid green;
+}
+
+button {
+    background-color: violet;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#summaryTable {
+    width: 100%;
+}
+
+.fitwidth1 {
+    text-align: right;
+    padding-top: 10px;
+    vertical-align: middle;
+}
+
+.fitwidth2 {
+    text-align: left;
+    font-weight: bold;
+    padding-top: 10px;
+    vertical-align: middle;
+}
+
+#maxBudget {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.inputClass2 {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.labelClass2 {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.negative {
+    color: red;
+}
+
+#buttonReset {
+    background-color: gray;
+    color: white;
+}
+
+#mainTable {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    border-collapse: separate;
+    border:solid black 1px;
+    border-radius: 6px;
+  }
+  
+#mainTable th, #mainTable td {
+    border: 1px solid black;
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+}
+
+#mainTable th {
+    background-color: skyblue;
+    border-top: none;
+    color: black;
+    font-size: 16px;
+}
+
+#mainTable td {
+   font-size: 13px;
+}
+
+#mainTable td:first-child, #mainTable th:first-child {
+     border-left: none;
+}
+
+#mainTable td:nth-child(3n), #mainTable td:nth-child(5n){
+    text-align: right;
+}
+
+#mainTable td:nth-child(4n){
+    text-align: center;
+}
+
+#purTotal {
+    font-size: 20px;
+}
+
+/*
+    Media Queries for Medium and Large Screens
+*/
+@media only screen and (min-width: 45rem) {
+    .main-div {
+        width: var(--main-div-size-large);
+    }
+    
+    h1 {
+        font-size: var(--head-font-size-large);
+    }
+}
+
+/*
+    -------------------
+*/

@@ -21,15 +21,35 @@ const block01 = [
     },
     {
         label: "To Do",
-        url: "week06/todo.html"
+        url: "week06/todoapp.html"
     }
 ]
 
-ol_bl01 = document.querySelector("#ol_bl01")
+const block02 = [
+    {
+        label: "Week 07",
+        url: "week07/index.html"
+    },
+    {
+        label: "Week 08",
+        url: "week08/index.html"
+    },
+    {
+        label: "Week 09",
+        url: "week09/index.html"
+    },
+    {
+        label: "Week 10",
+        url: "week10/index.html"
+    },
+    {
+        label: "Shopping App",
+        url: "week13/shoppingapp.html"
+    }
+]
 
-// Reference: https://dev.to/duxtech/6-maneras-de-iterar-un-array-3fbm
-
-function print_block(block) {
+function print_block(block, olId) {
+    let ol_bl01 = document.querySelector(olId)
     for (item of block){
         let li = document.createElement("li");
         let a = document.createElement("a");
@@ -41,4 +61,6 @@ function print_block(block) {
     }
 }
 
-print_block(block01)
+print_block(block01, "#ol_bl01");
+
+print_block(block02, "#ol_bl02");

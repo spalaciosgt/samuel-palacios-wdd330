@@ -1,0 +1,12 @@
+{
+    "typePurchase": [
+        {   "id" : "01", 
+            "name" : "Grocery", 
+            "values" : ["Bread", "Care", "Dairy", "Freezer", "Meat&Fish", "Snacks", "Vegetablers&Fruits", "Others"] 
+        },
+        {   "id" : "02", 
+            "name" : "Tech Store",
+            "values" : ["Computer", "Music", "Video&Games", "Others"]
+        }
+    ]
+}
