@@ -45,6 +45,7 @@ class ShoppingApp {
             this.yourName.focus();
 
             // Fetching data
+            // http://127.0.0.1:5500/week13/json/parameters.json
             fetch("https://spalaciosgt.github.io/week13/json/parameters.json")
                 .then((response) => response.json())
                 .then((catalogsData) => {
