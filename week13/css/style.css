@@ -146,6 +146,10 @@ button {
     color: red;
 }
 
+.delete {
+    background-color: cadetblue;
+}
+
 #buttonReset {
     background-color: gray;
     color: white;

@@ -45,7 +45,6 @@ class ShoppingApp {
             this.yourName.focus();
 
             // Fetching data
-            // http://127.0.0.1:5500/week13/json/parameters.json
             fetch("https://spalaciosgt.github.io/week13/json/parameters.json")
                 .then((response) => response.json())
                 .then((catalogsData) => {
@@ -334,18 +333,25 @@ class ShoppingApp {
         const th3 = document.createElement("th");
         const th4 = document.createElement("th");
         const th5 = document.createElement("th");
+        const th6 = document.createElement("th");
 
         th1.textContent = "Item/Product";
         th2.textContent = "Category";
         th3.textContent = "Unit Price (USD $.)";
         th4.textContent = "Amount";
         th5.textContent = "Total Price (USD $.)";
+        th6.textContent = "Actions";
 
         tr1.appendChild(th1);
-        tr1.appendChild(th2);
+
+        if (this.preferences["useCategories"] == "y") {
+            tr1.appendChild(th2);
+        }
+       
         tr1.appendChild(th3);
         tr1.appendChild(th4);
         tr1.appendChild(th5);
+        tr1.appendChild(th6);
 
         mainTable.appendChild(tr1);
 
@@ -361,6 +367,9 @@ class ShoppingApp {
             const td3 = document.createElement("td");
             const td4 = document.createElement("td");
             const td5 = document.createElement("td");
+            const td6 = document.createElement("td");
+
+            const bt6 = document.createElement("button");
 
             td1.textContent = product["name"];
             td2.textContent = product["category"];
@@ -369,17 +378,43 @@ class ShoppingApp {
             td5.textContent = this.getCurrencyFormat(total);
 
             tr.appendChild(td1);
-            tr.appendChild(td2);
+           
+            if (this.preferences["useCategories"] == "y") {
+                tr.appendChild(td2);
+            }
+           
             tr.appendChild(td3);
             tr.appendChild(td4);
             tr.appendChild(td5);
+            tr.appendChild(td6);
+            td6.appendChild(bt6);
+            bt6.classList.add("delete");
+            bt6.textContent = "X";
+            bt6.id = "Button" + i.toString();
+            bt6.addEventListener("click", 
+                this.deleteItem.bind(this));
 
             mainTable.appendChild(tr);
         }
     }
 
+    //
+    // Print Content
+    //
     print() {
         window.print();   
+    }
+
+    //
+    // Delete Item
+    //
+    deleteItem() {
+        let idButton = event.target.id;
+        let idNumber = parseInt (idButton.replace("Button", ""));
+        this.mainList.splice(idNumber, 1)
+        this.lsh.setMainList(this.mainList);
+        this.calculateTotals();
+        this.updateProductList();
     }
 }
 
